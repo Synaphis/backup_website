@@ -5,7 +5,7 @@ import LinkedInIcon from '../assets/icons/linkedin.svg';
 
 export const Footer = () => {
   return (
-    <footer className="py-5 bg-[#1B3C53] text-white/90 border-t border-white/20">
+    <footer className="py-5 bg-[#097C87] text-white/90 border-t border-white/20">
       <div className="container">
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
           <div className="text-center">

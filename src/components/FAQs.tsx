@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PlusIcon from '../assets/icons/plus.svg'
-import clsx from 'clsx';
 import MinusIcon from '../assets/icons/minus.svg';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -40,12 +39,12 @@ const AccordionItem = ({ question, answer }: { question: string; answer: string;
   return (
     <div
       className="py-7 border-b"
-      style={{ borderColor: "rgba(106, 137, 167, 0.3)" }}
+      style={{ borderColor: "rgba(161, 204, 166, 0.4)" }} // subtle border
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex items-center cursor-pointer">
-        <span className="flex-1 text-lg font-bold" style={{ color: "#1C2B3B" }}>{question}</span>
-        {isOpen ? <MinusIcon fill="#6A89A7" /> : <PlusIcon fill="#6A89A7" />}
+        <span className="flex-1 text-lg font-bold" style={{ color: "#097C87" }}>{question}</span>
+        {isOpen ? <MinusIcon fill="#097C87" /> : <PlusIcon fill="#097C87" />}
       </div>
 
       <AnimatePresence>
@@ -54,7 +53,7 @@ const AccordionItem = ({ question, answer }: { question: string; answer: string;
             initial={{ opacity: 0, height: 0, marginTop: 0 }}
             animate={{ opacity: 1, height: "auto", marginTop: "16px" }}
             exit={{ opacity: 0, height: 0, marginTop: 0 }}
-            style={{ color: "#3E566B" }}
+            style={{ color: "#3E6B57" }} // slightly darker text for readability
           >
             {answer}
           </motion.div>
@@ -66,11 +65,11 @@ const AccordionItem = ({ question, answer }: { question: string; answer: string;
 
 export const FAQs = () => {
   return (
-    <div className="sm:py-24" style={{ backgroundColor: "#EAF2F8", color: "#1C2B3B" }}>
+    <div className="sm:py-48 py-24" style={{ backgroundColor: "#A1CCA6", color: "#097C87" }}>
       <div className="container">
         <h2
           className="text-center text-5xl sm:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter"
-          style={{ color: "#1C2B3B" }}
+          style={{ color: "#097C87" }}
         >
           Frequently Asked Questions
         </h2>

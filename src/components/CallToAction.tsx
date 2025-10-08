@@ -21,8 +21,8 @@ export const CallToAction = () => {
     <div
       ref={containerRef}
       id="contact"
-      className="relative text-black py-[160px] sm:py-[200px] text-center overflow-hidden"
-      style={{ backgroundColor: "#EAF6FF" }} // very light tint of #BDDDFC
+      className="relative text-white py-[160px] sm:py-[200px] text-center overflow-hidden"
+      style={{ backgroundColor: "#065A63" }} // darker teal tone
     >
       <div className="container max-w-xl relative mx-auto px-4">
         {/* ===== Floating Image Parallax ===== */}
@@ -37,12 +37,18 @@ export const CallToAction = () => {
         </motion.div>
 
         {/* ===== Heading ===== */}
-        <h2 className="font-bold text-5xl sm:text-6xl tracking-tighter mb-6" style={{ color: "#2C4E6B" }}>
+        <h2
+          className="font-bold text-5xl sm:text-6xl tracking-tighter mb-6"
+          style={{ color: "#A1CCA6" }} // light contrasting color for dark background
+        >
           Let’s Work Together!
         </h2>
 
         {/* ===== Subtext ===== */}
-        <p className="text-lg sm:text-xl leading-relaxed max-w-md mx-auto mb-10" style={{ color: "#3A5E7F" }}>
+        <p
+          className="text-lg sm:text-xl leading-relaxed max-w-md mx-auto mb-10"
+          style={{ color: "#C1E3CB" }} // softer light color for readability
+        >
           Great things start with a simple conversation. Tell us about your
           vision, and let’s collaborate to turn your ideas into something
           extraordinary.
@@ -51,18 +57,17 @@ export const CallToAction = () => {
         {/* ===== Contact Form ===== */}
         <form className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
           <input
-  type="email"
-  placeholder="Email Address"
-  className="h-12 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF] w-full sm:flex-1 focus:outline-none focus:ring-2 focus:ring-[#BDDDFC] transition-all"
-  style={{ backgroundColor: "#BDDDFC30" }} // semi-transparent background
-/>
+            type="email"
+            placeholder="Email Address"
+            className="h-12 rounded-lg px-5 font-medium placeholder:text-[#A1CCA6] w-full sm:flex-1 focus:outline-none focus:ring-2 focus:ring-[#097C87] transition-all"
+            style={{ backgroundColor: "#097C8730", color: "#ffffff" }} // semi-transparent dark input
+          />
 
           <button
             type="submit"
-            className="h-12 rounded-lg px-6 font-semibold transition-colors w-full sm:w-auto"
-            style={{ backgroundColor: "#BDDDFC", color: "#1A3A57" }}
-            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#A8D3F5")}
-            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#BDDDFC")}
+            className="h-12 rounded-lg px-6 font-semibold w-full sm:w-auto transition-colors bg-white text-black"
+            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#097C87")}
+            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#ffffff")}
           >
             Launch It
           </button>

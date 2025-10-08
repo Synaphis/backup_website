@@ -42,13 +42,13 @@ const latestPosts: Post[] = [
 
 export const LatestPosts = () => {
   return (
-    <section className="relative py-60 text-black bg-[#FFF3EB]">
+    <section className="relative py-60 text-black bg-[#F9D779]/10">
       <div className="container mx-auto relative z-10">
         {/* Section Header */}
-        <h2 className="font-black text-5xl text-center text-[#FCA47C]">
+        <h2 className="font-black text-5xl text-center text-[#F9D779]">
           Read, Learn, Explore
         </h2>
-        <p className="text-xl text-[#6A89A7] mt-5 text-center max-w-2xl mx-auto">
+        <p className="text-xl text-[#5F5A3F] mt-5 text-center max-w-2xl mx-auto">
           Stay ahead of the curve with our latest posts. Explore deep dives,
           how-tos, and trend analyses that help you learn, grow, and think differently.
         </p>
@@ -62,10 +62,10 @@ export const LatestPosts = () => {
               category={post.category}
               buttonText="Learn More"
             >
-              <h3 className="text-[#1C1C1C] font-bold text-xl mb-2">
+              <h3 className="text-[#5F5A3F] font-bold text-xl mb-2">
                 {post.title}
               </h3>
-              <p className="text-[#6A89A7] text-base">{post.description}</p>
+              <p className="text-[#4B4532] text-base">{post.description}</p>
             </Card>
           ))}
         </div>
@@ -73,7 +73,7 @@ export const LatestPosts = () => {
         {/* Explore More Button */}
         <div className="text-center mt-16">
           <button
-            className="bg-[#FCA47C] text-white h-12 rounded-lg px-6 font-semibold hover:brightness-110 transition mt-8 w-full sm:w-auto"
+            className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#F9D779] hover:text-black transition mt-8 w-full sm:w-auto"
             onClick={() => console.log("Navigate to company blog")}
           >
             Explore More

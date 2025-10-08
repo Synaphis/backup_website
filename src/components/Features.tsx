@@ -114,8 +114,8 @@ export const Features = () => {
           <div className="text-center mt-10">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="bg-black text-white h-12 rounded-lg px-6 font-semibold hover:bg-[#A1CCA6] transition-colors mt-8 w-full sm:w-auto"
-            >
+               className="bg-white text-black h-12 rounded-lg px-6 font-semibold transition-colors mt-8 w-full sm:w-auto hover:bg-[#A1CCA6]"
+>
               {expanded ? "View Less" : "View More"}
             </button>
           </div>
