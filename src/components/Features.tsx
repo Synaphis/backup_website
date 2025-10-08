@@ -29,7 +29,6 @@ const features = [
       "Modernize your infrastructure and accelerate delivery with leading cloud platforms. We implement CI/CD pipelines, optimize operations, and integrate tools like Salesforce and ServiceNow.",
     icon: CloudSolutions,
   },
- 
   {
     title: "Staff Augmentation",
     description:
@@ -42,21 +41,18 @@ const features = [
       "Our dedicated QA team ensures every product performs flawlessly under real-world conditions. From automated testing frameworks to security and compliance testing, we help businesses meet international standards and platform-specific requirements.",
     icon: QATesting,
   },
-
   {
     title: "Digital Growth & Marketing",
     description:
       "We provide complete digital marketing services including SEO, social media management, PPC, email campaigns, and content creation. Our strategies help businesses of all sizes grow online, reach the right audience, and maximize ROI.",
     icon: DigitalMarketing,
   },
-{
+  {
     title: "Data Analytics & Business Intelligence",
     description:
       "Turn data into strategy with advanced analytics powered by Tableau, Power BI, and custom-built dashboards. We also specialize in integrating licensed tools like Salesforce Analytics to give you deeper, actionable insights.",
     icon: DataAnalytics,
   },
-  
-  
 ];
 
 // Animation variants
@@ -68,19 +64,17 @@ const cardVariants = {
 
 export const Features = () => {
   const [expanded, setExpanded] = useState(false);
-
-  // Show only 3 by default, otherwise show all
   const visibleFeatures = expanded ? features : features.slice(0, 3);
 
   return (
-    <div className="bg-black text-white py-[72px] sm:py-24">
+    <div className="bg-gradient-to-b from-[#D9EAD8] via-[#A1CCA6] to-[#4B7F57] text-white py-[72px] sm:py-24">
       <div className="container">
-        <h2 className="text-center font-bold text-5xl sm:text-6xl tracking-tighter">
+        <h2 className="text-center font-bold text-5xl sm:text-6xl tracking-tighter text-black">
           Turning Ideas Into Impact
         </h2>
 
         <div className="max-w-xl mx-auto">
-          <p className="text-center mt-5 text-xl text-white/70">
+          <p className="text-center mt-5 text-xl text-black/70">
             We help businesses and individuals bring their visions to life with
             technology that feels effortless and empowering. From intelligent AI
             systems and custom-built software to cloud solutions, digital
@@ -92,9 +86,9 @@ export const Features = () => {
         {/* Feature cards */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
-            {visibleFeatures.map(({ title, description, icon: Icon }, index) => (
+            {visibleFeatures.map(({ title, description, icon: Icon }) => (
               <motion.div
-                key={title} // use title for stable key
+                key={title}
                 variants={cardVariants}
                 initial="hidden"
                 animate="show"
@@ -102,14 +96,14 @@ export const Features = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                className="border border-white/30 hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] px-5 py-10 text-center rounded-xl sm:flex-1 cursor-pointer"
+                className="border border-white/30 hover:border-black hover:shadow-[0_0_20px_rgba(0,0,0,0.2)] px-5 py-10 text-center rounded-xl sm:flex-1 cursor-pointer bg-white/10 backdrop-blur-sm"
               >
                 <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
                   <Icon className="h-8 w-8" />
                 </div>
 
-                <h3 className="mt-6 font-bold">{title}</h3>
-                <p className="mt-2 text-white/70">{description}</p>
+                <h3 className="mt-6 font-bold text-black">{title}</h3>
+                <p className="mt-2 text-black/70">{description}</p>
               </motion.div>
             ))}
           </AnimatePresence>
@@ -120,8 +114,7 @@ export const Features = () => {
           <div className="text-center mt-10">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#D2C1B6] transition-colors mt-8 w-full sm:w-auto"
-
+              className="bg-black text-white h-12 rounded-lg px-6 font-semibold hover:bg-[#A1CCA6] transition-colors mt-8 w-full sm:w-auto"
             >
               {expanded ? "View Less" : "View More"}
             </button>

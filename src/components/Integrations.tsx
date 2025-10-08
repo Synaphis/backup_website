@@ -22,17 +22,13 @@ export type IntegrationsType = typeof integrations;
 
 export const Integrations = () => {
   return (
-    <section
-      id="integrations"
-      className="py-24 overflow-hidden bg-black text-white"
-    >
+    <section id="integrations" className="py-24 overflow-hidden bg-black text-white">
       <div className="container">
         <div className="grid lg:grid-cols-2 items-center lg:gap-16">
-          {/* ===== Left Column: Heading + Text + Button ===== */}
+          {/* Left Column */}
           <div>
             <h2 className="text-6xl font-medium mt-6">
-              Integrated Tools, Open{" "}
-              <span style={{ color: "#1B3C53" }}>Innovation</span>
+              Integrated Tools, Open <span className="text-[#FCA47C]">Innovation</span>
             </h2>
 
             <p className="text-white/50 mt-4 text-lg">
@@ -40,40 +36,19 @@ export const Integrations = () => {
               Bring your skills, work alongside innovators, and help shape what’s next.
             </p>
 
-            {/* ===== CTA Button (Unified Style) ===== */}
             <button
               type="button"
-              className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#D2C1B6] transition-colors mt-8 w-full sm:w-auto"
+              className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#FCA47C] transition-colors mt-8 w-full sm:w-auto"
             >
               Contribute & Build Together
             </button>
           </div>
 
-          {/* ===== Right Column: Integration Grid ===== */}
+          {/* Right Column */}
           <div>
             <div className="h-[400px] lg:h-[800px] mt-8 lg:mt-0 overflow-hidden grid md:grid-cols-2 gap-4 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
-              
-              {/* Integration Column 1 */}
-              <IntegrationColumn
-                integrations={integrations.map((item, index) => ({
-                  ...item,
-                  iconElement: <Image key={index} src={item.icon} alt={item.name} width={64} height={64} className="mb-4" />
-                }))}
-              />
-
-              {/* Integration Column 2 (Reversed) */}
-              <IntegrationColumn
-                integrations={integrations
-                  .slice()
-                  .reverse()
-                  .map((item, index) => ({
-                    ...item,
-                    iconElement: <Image key={index} src={item.icon} alt={item.name} width={64} height={64} className="mb-4" />
-                  }))}
-                reverse
-                className="hidden md:flex"
-              />
-
+              <IntegrationColumn integrations={integrations} />
+              <IntegrationColumn integrations={integrations.slice().reverse()} reverse className="hidden md:flex" />
             </div>
           </div>
         </div>

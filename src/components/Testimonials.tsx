@@ -41,9 +41,9 @@ const testimonials: Testimonial[] = [
 // ✅ Component
 export const TestimonialsSection = () => {
   return (
-    <section className="py-24 bg-black text-white">
+    <section className="py-24 bg-gradient-to-b from-[#A0F0F4] via-[#23CED9] to-[#0B828B] text-black">
       <div className="container mx-auto px-6">
-        <h2 className="text-center text-5xl font-extrabold mb-16">
+        <h2 className="text-center text-5xl font-extrabold mb-16 text-black">
           What Our Clients Say
         </h2>
 
@@ -52,11 +52,11 @@ export const TestimonialsSection = () => {
             <blockquote
               key={index}
               className={twMerge(
-                "p-6 flex flex-col justify-between h-full bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1",
+                "p-6 flex flex-col justify-between h-full bg-white/10 rounded-2xl border border-black/20 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1",
                 index === 2 && "md:hidden lg:flex"
               )}
             >
-              <p className="font-heading text-2xl lg:text-3xl font-black leading-snug mb-8">
+              <p className="font-heading text-2xl lg:text-3xl font-black leading-snug mb-8 text-black/90">
                 “{testimonial.text}”
               </p>
 
@@ -65,13 +65,13 @@ export const TestimonialsSection = () => {
                   <Image
                     src={testimonial.avatarImage}
                     alt={testimonial.name}
-                    width={64} // matches w-16
-                    height={64} // matches h-16
-                    className="rounded-full object-cover bg-zinc-700"
+                    width={64}
+                    height={64}
+                    className="rounded-full object-cover bg-black/20"
                   />
                   <div>
-                    <div className="text-lg font-black">{testimonial.name}</div>
-                    <div className="text-zinc-400 text-sm">{testimonial.title}</div>
+                    <div className="text-lg font-black text-black">{testimonial.name}</div>
+                    <div className="text-black/70 text-sm">{testimonial.title}</div>
                   </div>
                 </div>
               </cite>

@@ -28,8 +28,9 @@ export default function Home() {
   <TestimonialsSection />
    </section>
 
-      <Integrations/>
+      
       <LatestPosts/>
+      <Integrations/>
 
      <section id="faqs">
   <FAQs />

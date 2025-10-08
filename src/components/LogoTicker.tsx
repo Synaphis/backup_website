@@ -20,13 +20,13 @@ const images = [
 
 export const LogoTicker = () => {
   return (
-    <div className="bg-black text-white py-[72px] sm:py-24">
+    <div className="bg-[#E1E9F0] text-[#6A89A7] py-[72px] sm:py-24">
       <div className="container">
-        <h2 className="text-xl text-center text-white/70">
+        <h2 className="text-xl text-center text-[#6A89A7]/80">
           Trusted by Leading Companies and Visionaries Worldwide
         </h2>
 
-        <div className="flex overflow-hidden mt-9 before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 relative after:right-0 before:left-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))]">
+        <div className="relative flex overflow-hidden mt-9 before:content-[''] before:z-10 after:content-[''] before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 after:right-0 before:left-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,#E1E9F0,rgb(225,233,240,0))] after:bg-[linear-gradient(to_left,#E1E9F0,rgb(225,233,240,0))]">
           <motion.div
             transition={{ duration: 10, ease: "linear", repeat: Infinity }}
             initial={{ translateX: 0 }}
@@ -35,7 +35,7 @@ export const LogoTicker = () => {
           >
             {images.map(({ src, alt }, index) => (
               <Image
-                key={`logo-${index}`} // ✅ Added unique key
+                key={`logo-${index}`} // ✅ unique key
                 src={src}
                 alt={alt}
                 className="flex-none h-8 w-auto"
@@ -43,7 +43,7 @@ export const LogoTicker = () => {
             ))}
             {images.map(({ src, alt }, index) => (
               <Image
-                key={`logo-duplicate-${index}`} // ✅ Added unique key for second loop
+                key={`logo-duplicate-${index}`} // ✅ unique key for second loop
                 src={src}
                 alt={alt}
                 className="flex-none h-8 w-auto"

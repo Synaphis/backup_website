@@ -21,7 +21,8 @@ export const CallToAction = () => {
     <div
       ref={containerRef}
       id="contact"
-      className="relative bg-black text-white py-[160px] sm:py-[200px] text-center overflow-hidden"
+      className="relative text-black py-[160px] sm:py-[200px] text-center overflow-hidden"
+      style={{ backgroundColor: "#EAF6FF" }} // very light tint of #BDDDFC
     >
       <div className="container max-w-xl relative mx-auto px-4">
         {/* ===== Floating Image Parallax ===== */}
@@ -36,12 +37,12 @@ export const CallToAction = () => {
         </motion.div>
 
         {/* ===== Heading ===== */}
-        <h2 className="font-bold text-5xl sm:text-6xl tracking-tighter mb-6">
+        <h2 className="font-bold text-5xl sm:text-6xl tracking-tighter mb-6" style={{ color: "#2C4E6B" }}>
           Let’s Work Together!
         </h2>
 
         {/* ===== Subtext ===== */}
-        <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-md mx-auto mb-10">
+        <p className="text-lg sm:text-xl leading-relaxed max-w-md mx-auto mb-10" style={{ color: "#3A5E7F" }}>
           Great things start with a simple conversation. Tell us about your
           vision, and let’s collaborate to turn your ideas into something
           extraordinary.
@@ -50,14 +51,18 @@ export const CallToAction = () => {
         {/* ===== Contact Form ===== */}
         <form className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
           <input
-            type="email"
-            placeholder="Email Address"
-            className="h-12 bg-white/15 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF] w-full sm:flex-1 focus:outline-none focus:ring-2 focus:ring-[#456882]/60 transition-all"
-          />
+  type="email"
+  placeholder="Email Address"
+  className="h-12 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF] w-full sm:flex-1 focus:outline-none focus:ring-2 focus:ring-[#BDDDFC] transition-all"
+  style={{ backgroundColor: "#BDDDFC30" }} // semi-transparent background
+/>
 
           <button
             type="submit"
-            className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#D2C1B6] transition-colors w-full sm:w-auto"
+            className="h-12 rounded-lg px-6 font-semibold transition-colors w-full sm:w-auto"
+            style={{ backgroundColor: "#BDDDFC", color: "#1A3A57" }}
+            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#A8D3F5")}
+            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#BDDDFC")}
           >
             Launch It
           </button>

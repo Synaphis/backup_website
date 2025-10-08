@@ -1,24 +1,23 @@
 import { ComponentPropsWithoutRef } from "react";
 import { twMerge } from "tailwind-merge";
 
-// Palette-based glow colors
+// Glow and tag colors based on #FCA47C
 const paletteGlow: Record<string, string> = {
-  dark: "rgba(255, 255, 255)",    // #7F8CAA semi-transparent
-  lightTeal: "rgba(255, 255, 255)", // #B8CFCE semi-transparent
-  highlight: "rgba(255, 255, 255)", // #EAEFEF semi-transparent
-  default: "rgba(255, 255, 255)",   // fallback
+  dark: "rgba(252, 164, 124, 0.4)",
+  lightTeal: "rgba(252, 164, 124, 0.25)",
+  highlight: "rgba(252, 164, 124, 0.6)",
+  default: "rgba(252, 164, 124, 0.3)",
 };
 
-// Tag background colors for category tags
 const tagColors: Record<string, string> = {
-  dark: "#FFFFFF",
-  lightTeal: "#FFFFFF",
-  highlight: "#FFFFFF",
-  default: "#FFFFFF",
+  dark: "#FCA47C",
+  lightTeal: "#FCA47C",
+  highlight: "#FCA47C",
+  default: "#FCA47C",
 };
 
 // Base card background
-const cardBackground = "#1C1C1C"; // dark gray-blue
+const cardBackground = "#FBE3D9"; // very light shade of #FCA47C
 
 export const Card = (
   props: ComponentPropsWithoutRef<'div'> & { color?: keyof typeof paletteGlow; buttonText?: string; category?: string }
@@ -66,7 +65,7 @@ export const Card = (
         <div className="flex justify-between items-center mt-6">
           {buttonText && (
             <button
-              className="px-4 py-2 rounded-lg text-[#1C1C1C] transition hover:brightness-110"
+              className="px-4 py-2 rounded-lg text-white transition hover:brightness-110"
               style={{ backgroundColor: glowColor }}
             >
               {buttonText}

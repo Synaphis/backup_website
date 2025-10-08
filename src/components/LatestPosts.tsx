@@ -42,22 +42,18 @@ const latestPosts: Post[] = [
 
 export const LatestPosts = () => {
   return (
-    <section
-      className="relative py-60 text-white bg-black"
-
-
-    >
+    <section className="relative py-60 text-black bg-[#FFF3EB]">
       <div className="container mx-auto relative z-10">
-        {/* ===== Section Header ===== */}
-        <h2 className="font-bold font-black text-5xl text-center">
+        {/* Section Header */}
+        <h2 className="font-black text-5xl text-center text-[#FCA47C]">
           Read, Learn, Explore
         </h2>
-        <p className="text-xl text-white/70 mt-5 text-center max-w-2xl mx-auto">
+        <p className="text-xl text-[#6A89A7] mt-5 text-center max-w-2xl mx-auto">
           Stay ahead of the curve with our latest posts. Explore deep dives,
           how-tos, and trend analyses that help you learn, grow, and think differently.
         </p>
 
-        {/* ===== Blog Cards ===== */}
+        {/* Blog Cards */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
           {latestPosts.map((post, index) => (
             <Card
@@ -66,19 +62,19 @@ export const LatestPosts = () => {
               category={post.category}
               buttonText="Learn More"
             >
-              <h3 className="text-white font-bold text-xl mb-2">
+              <h3 className="text-[#1C1C1C] font-bold text-xl mb-2">
                 {post.title}
               </h3>
-              <p className="text-white/70 text-base">{post.description}</p>
+              <p className="text-[#6A89A7] text-base">{post.description}</p>
             </Card>
           ))}
         </div>
 
-        {/* ===== Explore More Button ===== */}
+        {/* Explore More Button */}
         <div className="text-center mt-16">
           <button
-            className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#D2C1B6] transition-colors mt-8 w-full sm:w-auto"
-            onClick={() => console.log('Navigate to company blog')}
+            className="bg-[#FCA47C] text-white h-12 rounded-lg px-6 font-semibold hover:brightness-110 transition mt-8 w-full sm:w-auto"
+            onClick={() => console.log("Navigate to company blog")}
           >
             Explore More
           </button>

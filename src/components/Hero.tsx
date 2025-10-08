@@ -8,10 +8,10 @@ export const Hero = () => {
   return (
     <div>
       <div
-        className="bg-black text-white bg-[linear-gradient(to_bottom,#000,#1B3C53_34%,#234C6A_65%,#456882_82%)] py-[72px] sm:py-24 relative overflow-clip"
+        className="bg-black text-white bg-[linear-gradient(to_bottom,#000,#097c87_34%,#097c87_65%,#097c87_82%)] py-[72px] sm:py-24 relative overflow-clip"
       >
         {/* Background radial gradient circle */}
-        <div className="absolute h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] lg:w-[2400px] lg:h-[1200px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#D2C1B6] bg-[radial-gradient(closest-side,#000_82%,#D2C1B6)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"></div>
+        <div className="absolute h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] lg:w-[2400px] lg:h-[1200px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#097c87] bg-[radial-gradient(closest-side,#000_82%,#097c87)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)]"></div>
 
         <div className="container relative">
           <div className="flex justify-center mt-8">
@@ -65,7 +65,7 @@ export const Hero = () => {
           {/* Hero button */}
           <div className="flex justify-center mt-8">
             <button
-              className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#D2C1B6] transition-colors mt-8 w-full sm:w-auto"
+              className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#097c87] transition-colors mt-8 w-full sm:w-auto"
             >
               Explore What&apos;s Possible
             </button>
