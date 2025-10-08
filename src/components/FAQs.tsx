@@ -1,26 +1,91 @@
+
+'use client'
+
+import React from 'react';
+import PlusIcon from '../assets/icons/plus.svg'
+import clsx from 'clsx';
+import MinusIcon from '../assets/icons/minus.svg';
+import {motion, AnimatePresence} from "framer-motion";
+
 const items = [
   {
-    question: "What payment methods do you accept?",
+    question: "What does Synaphis do?",
     answer:
-      "We accept all major credit cards, PayPal, and various other payment methods depending on your location. Please contact our support team for more information on accepted payment methods in your region.",
+      "Synaphis helps businesses build smarter with AI, cloud, and custom software solutions. We partner with companies to design, develop, and deploy technology that accelerates growth and simplifies operations — whether that means building new products or strengthening existing systems.",
   },
   {
-    question: "How does the pricing work for teams?",
+    question: "Where is Synaphis located?",
     answer:
-      "Our pricing is per user, per month. This means you only pay for the number of team members you have on your account. Discounts are available for larger teams and annual subscriptions.",
+      "We’re headquartered in the United States and supported by a global network of vetted engineers. This structure gives clients the reliability and standards of a US-based partner, with the flexibility and scalability that global talent provides.",
   },
   {
-    question: "Can I change my plan later?",
+    question: "How does Synaphis manage project delivery?",
     answer:
-      "Yes, you can upgrade or downgrade your plan at any time. Changes to your plan will be prorated and reflected in your next billing cycle.",
+      "Our delivery model is built on clarity and efficiency. We keep operations lean, maintain transparent communication, and bring in the right expertise at the right time. Every project is managed with a focus on accountability, adaptability, and dependable results.",
   },
   {
-    question: "Is my data secure?",
+    question: "What makes Synaphis different from other outsourcing partners?",
     answer:
-      "Security is our top priority. We use state-of-the-art encryption and comply with the best industry practices to ensure that your data is stored securely and accessed only by authorized users.",
+      "Synaphis stands out through its blend of US credibility, technical depth, and global capability. We prioritize quality execution, not volume. Our clients trust us because we deliver consistent results without unnecessary overhead, helping them move faster and achieve more.",
+  },
+  {
+    question: "How can we start working with Synaphis?",
+    answer:
+      "Getting started is simple — reach out through our contact form or schedule a quick discovery call. We’ll discuss your goals, recommend a tailored approach, and assemble the right team to deliver technology that fits your needs perfectly.",
   },
 ];
 
+const AccordionItem =({question, answer}: {question:string; answer: string;}) => {
+
+  const [isOpen, setIsOpen] = React.useState(false);
+
+
+return (
+  <div className='py-7 border-b border-white/30' onClick={() => setIsOpen(!isOpen)}>
+        <div className='flex items-center '>
+          <span className='flex-1 text-lg font-bold'> {question}</span>
+          {isOpen ? <MinusIcon/> : <PlusIcon/> }
+          </div>
+        <AnimatePresence>
+        {isOpen && (
+ <motion.div 
+
+        initial={{opacity: 0, height: 0, marginTop: 0,}}
+        animate ={{opacity: 1, height: "auto", marginTop: "16px",}}
+        exit={{opacity: 0,  height: 0, marginTop: 0, }}
+        
+        > {answer}</motion.div>
+        
+
+        )}
+        </AnimatePresence>
+        </div>
+       
+          
+  
+);
+
+};
+
 export const FAQs = () => {
-  return null;
+  return(
+  <div className="bg-black text-white sm:py-24"> 
+  
+  <div className="container">
+
+    <h2 className='text-center text-5xl sm:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter'> Frequently Asked Questions</h2>
+    <div className='mt-12 max-w-[648px] mx-auto'>
+      {items.map(({question, answer}) => (
+        <AccordionItem question={question} answer={answer} key={question}/>
+        
+
+      ))}
+
+
+    </div>
+
+
+  </div>
+  </div>
+  );
 };
