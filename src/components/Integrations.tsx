@@ -52,12 +52,28 @@ export const Integrations = () => {
           {/* ===== Right Column: Integration Grid ===== */}
           <div>
             <div className="h-[400px] lg:h-[800px] mt-8 lg:mt-0 overflow-hidden grid md:grid-cols-2 gap-4 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
-              <IntegrationColumn integrations={integrations} />
+              
+              {/* Integration Column 1 */}
               <IntegrationColumn
-                integrations={integrations.slice().reverse()}
+                integrations={integrations.map((item, index) => ({
+                  ...item,
+                  iconElement: <Image key={index} src={item.icon} alt={item.name} width={64} height={64} className="mb-4" />
+                }))}
+              />
+
+              {/* Integration Column 2 (Reversed) */}
+              <IntegrationColumn
+                integrations={integrations
+                  .slice()
+                  .reverse()
+                  .map((item, index) => ({
+                    ...item,
+                    iconElement: <Image key={index} src={item.icon} alt={item.name} width={64} height={64} className="mb-4" />
+                  }))}
                 reverse
                 className="hidden md:flex"
               />
+
             </div>
           </div>
         </div>
