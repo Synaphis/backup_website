@@ -21,8 +21,7 @@ export const CallToAction = () => {
     <div
       ref={containerRef}
       id="contact"
-      className="relative text-white py-[160px] sm:py-[200px] text-center overflow-hidden"
-      style={{ backgroundColor: "#065A63" }} // darker teal tone
+      className="relative bg-black text-white py-[160px] sm:py-[200px] text-center overflow-hidden"
     >
       <div className="container max-w-xl relative mx-auto px-4">
         {/* ===== Floating Image Parallax ===== */}
@@ -37,40 +36,46 @@ export const CallToAction = () => {
         </motion.div>
 
         {/* ===== Heading ===== */}
-        <h2
-          className="font-bold text-5xl sm:text-6xl tracking-tighter mb-6"
-          style={{ color: "#A1CCA6" }} // light contrasting color for dark background
-        >
-          Let’s Work Together!
-        </h2>
+        <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter mb-6">
+  Let’s Work <span className="text-[#F9D779] inline-block -rotate-2">Together</span>!
+</h2>
+
 
         {/* ===== Subtext ===== */}
-        <p
-          className="text-lg sm:text-xl leading-relaxed max-w-md mx-auto mb-10"
-          style={{ color: "#C1E3CB" }} // softer light color for readability
-        >
-          Great things start with a simple conversation. Tell us about your
-          vision, and let’s collaborate to turn your ideas into something
-          extraordinary.
-        </p>
+        <p className="text-lg sm:text-xl leading-relaxed max-w-md mx-auto mb-10">
+  Great things start with a <span className="text-[#F9D779] font-semibold">simple conversation</span>. 
+  Tell us about your vision, and let’s collaborate to turn your ideas into something extraordinary.
+</p>
+
 
         {/* ===== Contact Form ===== */}
         <form className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
           <input
             type="email"
             placeholder="Email Address"
-            className="h-12 rounded-lg px-5 font-medium placeholder:text-[#A1CCA6] w-full sm:flex-1 focus:outline-none focus:ring-2 focus:ring-[#097C87] transition-all"
-            style={{ backgroundColor: "#097C8730", color: "#ffffff" }} // semi-transparent dark input
+            className="h-12 bg-white/15 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF] w-full sm:flex-1 focus:outline-none focus:ring-2 focus:ring-[#456882]/60 transition-all"
           />
 
           <button
-            type="submit"
-            className="h-12 rounded-lg px-6 font-semibold w-full sm:w-auto transition-colors bg-white text-black"
-            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#097C87")}
-            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#ffffff")}
-          >
-            Launch It
-          </button>
+  type="submit"
+  className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#D2C1B6] transition-colors w-full sm:w-auto flex items-center justify-center gap-2 group"
+>
+  Launch It
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+    className="w-5 h-5 transform transition-transform duration-200 group-hover:-translate-y-1"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 19V5m0 0l-6 6m6-6 6 6"
+    />
+  </svg>
+</button>
         </form>
       </div>
     </div>

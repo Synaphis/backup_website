@@ -23,28 +23,28 @@ export const Navbar = () => {
     >
       {/* ===== Animated Energy Pulse Bar ===== */}
       <motion.div
-        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#097C87]/80 via-[#097C87]/50 to-[#097C87]/30"
+        className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-[#1B3C53] via-[#234C6A] to-[#D2C1B6]"
         animate={{ backgroundPositionX: ["0%", "100%"] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+        transition={{
+          repeat: Infinity,
+          duration: 10,
+          ease: "linear",
+        }}
         style={{ backgroundSize: "200% 100%" }}
       />
 
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* ===== Logo without shadow/glow ===== */}
-        <div className="relative flex items-center justify-center">
-          <div className="absolute -inset-y-4 -inset-x-6 rounded-b-xl bg-gradient-to-r from-[#097C87]/40 via-[#097C87]/25 to-[#097C87]/15 opacity-40 -z-10" />
-
-          <a href="/" className="relative flex items-center justify-center">
-            <Image
-              src={logoimage}
-              alt="Synaphis Logo"
-              width={120}
-              height={120}
-              className="relative h-40 w-40"
-              priority
-            />
-          </a>
-        </div>
+        {/* ===== Logo (Static, No Banner) ===== */}
+        <a href="/" className="flex items-center justify-center">
+          <Image
+            src={logoimage}
+            alt="Synaphis Logo"
+            width={120}
+            height={120}
+            className="h-40 w-40 drop-shadow-[0_0_25px_rgba(255,255,255,0.6)]"
+            priority
+          />
+        </a>
 
         {/* ===== Desktop Navigation ===== */}
         <nav className="hidden md:flex items-center gap-10">
@@ -62,25 +62,29 @@ export const Navbar = () => {
                   rest: { width: 0, opacity: 0 },
                 }}
                 initial="rest"
-                className="absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-[#097C87] via-[#097C87]/70 to-[#097C87]/50 rounded-full"
+                className="absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-[#1B3C53] via-[#234C6A] to-[#D2C1B6] rounded-full"
                 transition={{ duration: 0.4 }}
               />
             </motion.a>
           ))}
 
-          {/* ===== Contact CTA Button: White default, teal hover ===== */}
+          {/* ===== Contact CTA ===== */}
           <motion.a
             href="#contact"
             whileHover={{
               scale: 1.07,
-              boxShadow: "0 0 25px rgba(9,124,135,0.3)",
-              backgroundColor: "#097C87",
-              color: "#fff",
+              boxShadow: "0 0 25px rgba(255,255,255,0.3)",
             }}
             whileTap={{ scale: 0.95 }}
-            className="relative overflow-hidden py-2 px-6 rounded-xl text-black font-semibold bg-white transition-colors"
+            className="relative overflow-hidden py-2 px-6 rounded-xl text-black font-semibold bg-white transition"
           >
             <span className="relative z-10">Contact Us</span>
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-[#1B3C53] to-[#456882]"
+              initial={{ x: "-100%" }}
+              whileHover={{ x: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            />
           </motion.a>
         </nav>
 
@@ -124,11 +128,11 @@ export const Navbar = () => {
               href="#contact"
               whileHover={{
                 scale: 1.1,
-                backgroundColor: "#097C87",
-                color: "#fff",
+                backgroundColor: "#fff",
+                color: "#000",
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white py-2 px-8 rounded-xl text-black font-medium transition-colors"
+              className="bg-gradient-to-r from-[#1B3C53] to-[#456882] py-2 px-8 rounded-xl text-white font-medium"
             >
               Contact Us
             </motion.a>

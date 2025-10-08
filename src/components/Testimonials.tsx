@@ -3,7 +3,7 @@
 import { twMerge } from "tailwind-merge";
 import Image, { StaticImageData } from "next/image";
 
-// ✅ Import your local images (from src/assets/images)
+// ✅ Import your local images
 import ericaAvatar from "../assets/images/avatar-erica-wyatt.jpg";
 import noelAvatar from "../assets/images/avatar-noel-baldwin.jpg";
 import harryAvatar from "../assets/images/avatar-harry-bender.jpg";
@@ -41,22 +41,24 @@ const testimonials: Testimonial[] = [
 // ✅ Component
 export const TestimonialsSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-[#A0F0F4] via-[#23CED9] to-[#0B828B] text-black">
+    <section className="py-24 bg-black text-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-center text-5xl font-extrabold mb-16 text-black">
-          What Our Clients Say
-        </h2>
+        {/* Heading */}
+       <h2 className="text-center text-5xl font-extrabold mb-16">
+  What Our <span className="text-[#A1CCA6] inline-block -rotate-3">Clients</span> Say
+</h2>
 
+        {/* Testimonial cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-stretch">
           {testimonials.map((testimonial, index) => (
             <blockquote
               key={index}
               className={twMerge(
-                "p-6 flex flex-col justify-between h-full bg-white/10 rounded-2xl border border-black/20 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1",
+                "p-6 flex flex-col justify-between h-full bg-[#A1CCA6]/10 rounded-2xl border border-[#A1CCA6]/30 backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(161,204,166,0.4)]",
                 index === 2 && "md:hidden lg:flex"
               )}
             >
-              <p className="font-heading text-2xl lg:text-3xl font-black leading-snug mb-8 text-black/90">
+              <p className="font-heading text-2xl lg:text-3xl font-black leading-snug mb-8 text-[#A1CCA6]/90">
                 “{testimonial.text}”
               </p>
 
@@ -67,11 +69,11 @@ export const TestimonialsSection = () => {
                     alt={testimonial.name}
                     width={64}
                     height={64}
-                    className="rounded-full object-cover bg-black/20"
+                    className="rounded-full object-cover bg-[#A1CCA6]/20"
                   />
                   <div>
-                    <div className="text-lg font-black text-black">{testimonial.name}</div>
-                    <div className="text-black/70 text-sm">{testimonial.title}</div>
+                    <div className="text-lg font-black text-[#A1CCA6]">{testimonial.name}</div>
+                    <div className="text-[#A1CCA6]/70 text-sm">{testimonial.title}</div>
                   </div>
                 </div>
               </cite>

@@ -36,11 +36,26 @@ export const Integrations = () => {
               Bring your skills, work alongside innovators, and help shape what’s next.
             </p>
 
+            {/* Contribute & Build Together Button */}
             <button
               type="button"
-              className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#FCA47C] transition-colors mt-8 w-full sm:w-auto"
+              className="inline-flex items-center justify-center bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-gray-200 transition-colors mt-8 w-full sm:w-auto"
             >
               Contribute & Build Together
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
             </button>
           </div>
 

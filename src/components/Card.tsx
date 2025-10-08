@@ -1,23 +1,23 @@
 import { ComponentPropsWithoutRef } from "react";
 import { twMerge } from "tailwind-merge";
 
-// Glow and tag colors based on #F9D779
+// Glow and tag colors for dark cards
 const paletteGlow: Record<string, string> = {
-  dark: "rgba(249, 215, 121, 0.4)",
-  lightTeal: "rgba(249, 215, 121, 0.25)",
-  highlight: "rgba(249, 215, 121, 0.6)",
-  default: "rgba(249, 215, 121, 0.3)",
+  dark: "rgba(255,255,255,0.1)",
+  light: "rgba(255,255,255,0.05)",
+  highlight: "rgba(255,255,255,0.15)",
+  default: "rgba(255,255,255,0.08)",
 };
 
 const tagColors: Record<string, string> = {
-  dark: "#F9D779",
-  lightTeal: "#F9D779",
-  highlight: "#F9D779",
-  default: "#F9D779",
+  dark: "#FFFFFF",
+  light: "#FFFFFF",
+  highlight: "#FFFFFF",
+  default: "#FFFFFF",
 };
 
-// Base card background (slightly darker for contrast)
-const cardBackground = "#F0E0B0"; // slightly darker tint of #F9D779
+// Card background black
+const cardBackground = "#000000";
 
 export const Card = (
   props: ComponentPropsWithoutRef<'div'> & { color?: keyof typeof paletteGlow; buttonText?: string; category?: string }
@@ -28,7 +28,13 @@ export const Card = (
   const tagColor = tagColors[color];
 
   return (
-    <div className={twMerge("relative z-0 p-8 md:p-10 group rounded-2xl overflow-hidden", className)}>
+    <div
+      className={twMerge(
+        "relative z-0 p-8 md:p-10 group rounded-2xl overflow-hidden border",
+        className
+      )}
+      style={{ borderColor: "rgba(255, 255, 255, 0.2)" }} // subtle white border
+    >
       {/* Blurred glowing corner */}
       <div
         className="absolute w-16 h-16 rounded-xl top-1.5 right-1.5 -z-10 blur-lg opacity-0 group-hover:opacity-100 transition"
@@ -41,9 +47,9 @@ export const Card = (
         style={{ backgroundColor: glowColor }}
       />
 
-      {/* Main card background with masked gradient */}
+      {/* Main card background */}
       <div
-        className="absolute inset-0 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"
+        className="absolute inset-0 -z-10 rounded-2xl"
         style={{ backgroundColor: cardBackground }}
       ></div>
 
@@ -52,8 +58,8 @@ export const Card = (
         <div>
           {category && (
             <div
-              className="inline-block px-2 py-1 rounded text-sm font-semibold mb-2"
-              style={{ backgroundColor: tagColor, color: "#1C1C1C" }}
+              className="inline-block px-2 py-1 rounded text-sm font-semibold mb-2 text-black"
+              style={{ backgroundColor: tagColor }}
             >
               {category}
             </div>
@@ -66,7 +72,7 @@ export const Card = (
           {buttonText && (
             <button
               className="px-4 py-2 rounded-lg text-black transition hover:brightness-110"
-              style={{ backgroundColor: glowColor }}
+              style={{ backgroundColor: tagColor }}
             >
               {buttonText}
             </button>
@@ -78,7 +84,7 @@ export const Card = (
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
-            className="w-8 h-8 text-zinc-500 group-hover:text-zinc-300 transition"
+            className="w-8 h-8 text-gray-400 group-hover:text-gray-200 transition"
           >
             <path
               strokeLinecap="round"
