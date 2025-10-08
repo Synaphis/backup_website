@@ -1,5 +1,7 @@
+"use client";
+
 import { twMerge } from "tailwind-merge";
-import type { StaticImageData } from "next/image"; // harmless in Vite; native in Next.js
+import Image, { StaticImageData } from "next/image";
 
 // ✅ Import your local images (from src/assets/images)
 import ericaAvatar from "../assets/images/avatar-erica-wyatt.jpg";
@@ -60,22 +62,16 @@ export const TestimonialsSection = () => {
 
               <cite className="block mt-auto">
                 <div className="flex gap-3 items-center">
-                  <img
-                    src={
-                      typeof testimonial.avatarImage === "string"
-                        ? testimonial.avatarImage
-                        : testimonial.avatarImage.src
-                    }
+                  <Image
+                    src={testimonial.avatarImage}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover bg-zinc-700"
+                    width={64} // matches w-16
+                    height={64} // matches h-16
+                    className="rounded-full object-cover bg-zinc-700"
                   />
                   <div>
-                    <div className="text-lg font-black">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-zinc-400 text-sm">
-                      {testimonial.title}
-                    </div>
+                    <div className="text-lg font-black">{testimonial.name}</div>
+                    <div className="text-zinc-400 text-sm">{testimonial.title}</div>
                   </div>
                 </div>
               </cite>
