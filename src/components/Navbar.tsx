@@ -33,15 +33,16 @@ export const Navbar = () => {
         style={{ backgroundSize: "200% 100%" }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* ===== Logo (Static, No Banner) ===== */}
+      {/* ===== Navbar Content ===== */}
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* ===== Logo (No Glow/Effects) ===== */}
         <a href="/" className="flex items-center justify-center">
           <Image
             src={logoimage}
             alt="Synaphis Logo"
             width={120}
             height={120}
-            className="h-40 w-40 drop-shadow-[0_0_25px_rgba(255,255,255,0.6)]"
+            className="h-40 w-40" // removed drop-shadow and effects
             priority
           />
         </a>
@@ -53,16 +54,12 @@ export const Navbar = () => {
               key={index}
               href={link.href}
               className="relative text-white/70 hover:text-white text-lg font-light tracking-wide"
-              whileHover="hover"
             >
               {link.name}
               <motion.span
-                variants={{
-                  hover: { width: "100%", opacity: 1 },
-                  rest: { width: 0, opacity: 0 },
-                }}
-                initial="rest"
                 className="absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-[#1B3C53] via-[#234C6A] to-[#D2C1B6] rounded-full"
+                initial={{ width: 0, opacity: 0 }}
+                whileHover={{ width: "100%", opacity: 1 }}
                 transition={{ duration: 0.4 }}
               />
             </motion.a>
@@ -71,20 +68,11 @@ export const Navbar = () => {
           {/* ===== Contact CTA ===== */}
           <motion.a
             href="#contact"
-            whileHover={{
-              scale: 1.07,
-              boxShadow: "0 0 25px rgba(255,255,255,0.3)",
-            }}
+            whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="relative overflow-hidden py-2 px-6 rounded-xl text-black font-semibold bg-white transition"
+            className="relative py-2 px-6 rounded-xl text-black font-semibold bg-white transition"
           >
-            <span className="relative z-10">Contact Us</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#1B3C53] to-[#456882]"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-            />
+            Contact Us
           </motion.a>
         </nav>
 
@@ -126,11 +114,7 @@ export const Navbar = () => {
 
             <motion.a
               href="#contact"
-              whileHover={{
-                scale: 1.1,
-                backgroundColor: "#fff",
-                color: "#000",
-              }}
+              whileHover={{ scale: 1.1, backgroundColor: "#fff", color: "#000" }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-[#1B3C53] to-[#456882] py-2 px-8 rounded-xl text-white font-medium"
             >

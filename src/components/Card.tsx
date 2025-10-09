@@ -10,11 +10,13 @@ const paletteGlow: Record<string, string> = {
 };
 
 const tagColors: Record<string, string> = {
-  dark: "#FFFFFF",
-  light: "#FFFFFF",
-  highlight: "#FFFFFF",
-  default: "#FFFFFF",
+  dark: "#097C87",
+  light: "#A1CCA6",
+  highlight: "#FCA47C",
+  default: "#F9D779",
 };
+
+
 
 // Card background black
 const cardBackground = "#000000";

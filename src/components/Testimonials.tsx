@@ -20,19 +20,19 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     text: "Partnering with Synaphis completely changed how we manage data and customer requests. Their AI-powered automation reduced our manual workload by more than half, and the predictive analytics system they built continues to guide our decisions with accuracy and clarity. The team was transparent, creative, and quick to respond at every step. Working with them felt less like hiring an agency and more like gaining an extension of our own team. It’s been a genuinely outstanding experience.",
-    name: "Erica Wyatt",
+    name: "Millie Millward",
     title: "Product Manager - BlockLink",
     avatarImage: ericaAvatar,
   },
   {
     text: "We came to Synaphis with only an idea, and they turned it into a sleek, fully functional platform. From UX design to backend development, every step was handled with care using modern tools like React and Node.js. The final product exceeded our expectations—scalable, modern, and high-performing. What stood out most was their clarity, speed, and genuine dedication to quality. Synaphis didn’t just build a product; they built trust and showed us what great technical partnership really looks like.",
-    name: "Noel Baldwin",
+    name: "James Fanzon",
     title: "Founder - BitBridge",
     avatarImage: noelAvatar,
   },
   {
     text: "Synaphis helped us rebuild our online presence from the ground up with a strategy that finally made our marketing work. Their SEO and social campaigns brought in more qualified leads within weeks than we’d seen in months. What stood out most was how quickly they understood our brand voice and goals. Every piece of content felt authentic and on point. The entire process was smooth, collaborative, and results-driven—working with Synaphis felt like having a true partner invested in our growth.",
-    name: "Harry Bender",
+    name: "Matt Greer",
     title: "Marketing Manager - CryptoStudio",
     avatarImage: harryAvatar,
   },
@@ -44,7 +44,7 @@ export const TestimonialsSection = () => {
     <section className="py-24 bg-black text-white">
       <div className="container mx-auto px-6">
         {/* Heading */}
-       <h2 className="text-center text-5xl font-extrabold mb-16">
+       <h2 className="text-center text-5xl sm:text-6xl font-black mb-16">
   What Our <span className="text-[#A1CCA6] inline-block -rotate-3">Clients</span> Say
 </h2>
 

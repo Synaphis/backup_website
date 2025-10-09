@@ -70,17 +70,18 @@ export const Features = () => {
     <div className="bg-black py-[72px] sm:py-24">
       <div className="container">
         {/* Heading */}
-        <h2 className="text-center font-bold text-5xl sm:text-6xl tracking-tighter text-white">
-          Turning Ideas Into Impact
+        <h2 className="font-black text-center text-5xl sm:text-6xl  mt-6 text-white">
+          Turning Ideas Into <span className="text-[#2E151B]">Impact</span>
         </h2>
 
-        <div className="max-w-xl mx-auto">
-          <p className="text-center mt-5 text-xl text-white/70">
+        {/* Paragraph */}
+        <div className="max-w-xl mx-auto mt-5">
+          <p className="text-center text-xl text-white/90">
             We help businesses and individuals bring their visions to life with
-            technology that feels effortless and empowering. From intelligent AI
-            systems and custom-built software to cloud solutions, digital
-            growth, and automation, our services are designed to make innovation
-            accessible, scalable, and meaningful.
+            technology that feels effortless and empowering. From intelligent{" "}
+            <span className="text-[#2E151B]">AI systems</span> and custom-built software to{" "}
+            <span className="text-[#2E151B]">cloud solutions</span>, digital growth, and automation, our
+            services are designed to make innovation accessible, scalable, and meaningful.
           </p>
         </div>
 
@@ -97,9 +98,11 @@ export const Features = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                className="border border-gray-400/30 hover:border-gray-200/50 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] px-5 py-10 text-center rounded-xl sm:flex-1 cursor-pointer bg-white/10 backdrop-blur-sm"
+                className="relative px-5 py-10 text-center rounded-xl sm:flex-1 cursor-pointer bg-[#2E151B]/20 border border-[#6E3844]/50 backdrop-blur-sm hover:shadow-[0_0_20px_rgba(180,124,136,0.3)] transition-shadow duration-300"
+
               >
-                <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
+                {/* Icon */}
+                <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg relative z-10 mx-auto">
                   <Icon className="h-8 w-8" />
                 </div>
 
@@ -113,31 +116,31 @@ export const Features = () => {
         {/* View More / View Less Button with Arrow */}
         {features.length > 3 && (
           <div className="flex justify-center mt-10">
-  <button
-    onClick={() => setExpanded(!expanded)}
-    className="inline-flex items-center gap-2 h-12 px-6 rounded-lg font-semibold text-white transition-transform"
-  >
-    {expanded ? "View Less" : "View More"}
-    <motion.span
-      animate={{ rotate: expanded ? 180 : 0 }}
-      transition={{ duration: 0.3 }}
-      className="inline-block"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fillRule="evenodd"
-          d="M10 14a1 1 0 01-.707-.293l-4-4a1 1 0 111.414-1.414L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4A1 1 0 0110 14z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </motion.span>
-  </button>
-</div>
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="inline-flex items-center gap-2 h-12 px-6 rounded-lg font-semibold text-white transition-transform"
+            >
+              {expanded ? "View Less" : "View More"}
+              <motion.span
+                animate={{ rotate: expanded ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="inline-block"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 14a1 1 0 01-.707-.293l-4-4a1 1 0 111.414-1.414L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4A1 1 0 0110 14z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </motion.span>
+            </button>
+          </div>
         )}
       </div>
     </div>
