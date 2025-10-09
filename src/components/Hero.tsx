@@ -30,38 +30,61 @@ export const Hero = () => {
         <div className="container relative">
           <div className="flex justify-center mt-8">
             <div className="inline-flex relative">
-              <h1 className="text-7xl sm:text-9xl font-bold tracking-tighter text-center inline-flex">
+              <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold tracking-tighter text-center inline-flex">
                 AI, Cloud, and Software Solutions <br /> You Can Trust
               </h1>
 
-              {/* Draggable software image */}
+              {/* 🖥️ Software Image (Responsive) */}
               <motion.div
-                className="absolute right-[976px] top-[188px] hidden sm:inline"
+                className="
+                  absolute 
+                  top-[40px] right-[290px]
+                  sm:top-[188px] sm:right-[976px]
+                  md:top-[188px] md:right-[976px]
+                  inline
+                "
                 drag
                 dragSnapToOrigin
               >
                 <Image
                   src={Software_Development_Image}
-                  height={400}
-                  width={400}
                   alt="AI-powered software development illustration"
-                  className="max-w-none brightness-[1.08] contrast-[0.9] saturate-[0.9] drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] -rotate-[20deg]"
+                  width={160}
+                  height={160}
+                  className="
+                    sm:w-[250px] sm:h-[250px]
+                    md:w-[360px] md:h-[360px]
+                    brightness-[1.08] contrast-[0.9] saturate-[0.9]
+                    drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] -rotate-[20deg]
+                    transition-all duration-500
+                  "
                   draggable="false"
                 />
               </motion.div>
 
-              {/* Draggable cloud image */}
+              {/* ☁️ Cloud Image (Responsive) */}
               <motion.div
-                className="absolute top-[356px] left-[928px] hidden sm:inline"
+                className="
+                  absolute 
+                  top-[415px] left-[260px]
+                  sm:top-[356px] sm:left-[928px]
+                  md:top-[356px] md:left-[928px]
+                  inline
+                "
                 drag
                 dragSnapToOrigin
               >
                 <Image
                   src={Cloud_Computing_Image}
-                  height={400}
-                  width={400}
                   alt="Cloud computing illustration"
-                  className="max-w-none brightness-[0.96] rotate-[15deg]"
+                  width={160}
+                  height={160}
+                  className="
+                    sm:w-[250px] sm:h-[250px]
+                    md:w-[360px] md:h-[360px]
+                    brightness-[0.96] rotate-[15deg]
+                    transition-all duration-500
+                  "
                   draggable="false"
                 />
               </motion.div>
@@ -70,13 +93,13 @@ export const Hero = () => {
 
           {/* Hero paragraph */}
           <div className="flex justify-center">
-            <p className="text-center text-xl mt-8 max-w-md">
+            <p className="text-center text-base sm:text-lg md:text-xl mt-8 max-w-md">
               Synaphis helps businesses turn ideas into intelligent software powered by AI, cloud, and modern engineering. <br /> With a global team of experienced developers, we bring together the reliability clients expect with the flexibility today&apos;s projects demand. <br />
               Our focus is on building solutions that help companies move faster, scale smarter, and launch products that make a real impact.
             </p>
           </div>
 
-          {/* Downward arrow (replaces the button) */}
+          {/* Downward arrow (scroll button) */}
           <div className="flex justify-center mt-8">
             <motion.button
               type="button"

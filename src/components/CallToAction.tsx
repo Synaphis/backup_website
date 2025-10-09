@@ -24,8 +24,11 @@ export const CallToAction = () => {
       className="relative bg-black text-white py-[72px] sm:py-24 text-center overflow-hidden"
     >
       <div className="container max-w-xl relative mx-auto px-4">
-        {/* ===== Floating Image Parallax ===== */}
-        <motion.div style={{ translateY, rotate, scale }}>
+        {/* ===== Floating Image Parallax (Desktop Only) ===== */}
+        <motion.div
+          style={{ translateY, rotate, scale }}
+          className="hidden sm:block"
+        >
           <Image
             src={Innovative_Startup_Image}
             alt="Innovative Startup Illustration"
@@ -37,19 +40,39 @@ export const CallToAction = () => {
 
         {/* ===== Heading ===== */}
         <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter mb-6">
-  Let’s Work <span className="text-[#F9D779] inline-block -rotate-2">Together</span>!
-</h2>
+          Let’s Work{" "}
+          <span className="text-[#F9D779] inline-block -rotate-2">
+            Together
+          </span>
+          !
+        </h2>
 
+        {/* ===== Floating Mobile Image (Left side, animated) ===== */}
+        <motion.div
+          style={{ translateY, rotate, scale }}
+          className="block sm:hidden absolute left-0.5 top-[1.5%] transform -translate-y-1/2"
+        >
+          <Image
+            src={Innovative_Startup_Image}
+            alt="Innovative Startup Illustration"
+            className="w-[125px] -rotate-[25deg] opacity-90"
+            draggable="false"
+            priority
+          />
+        </motion.div>
 
         {/* ===== Subtext ===== */}
-        <p className="text-lg sm:text-xl leading-relaxed max-w-md mx-auto mb-10">
-  Great things start with a <span className="text-[#F9D779] font-semibold">simple conversation</span>. 
-  Tell us about your vision, and let’s collaborate to turn your ideas into something extraordinary.
-</p>
-
+        <p className="text-lg sm:text-xl leading-relaxed max-w-md mx-auto mb-10 mt-12 sm:mt-0">
+          Great things start with a{" "}
+          <span className="text-[#F9D779] font-semibold">
+            simple conversation
+          </span>
+          . Tell us about your vision, and let’s collaborate to turn your ideas
+          into something extraordinary.
+        </p>
 
         {/* ===== Contact Form ===== */}
-        <form className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
+        <form className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto relative z-10">
           <input
             type="email"
             placeholder="Email Address"
@@ -57,25 +80,25 @@ export const CallToAction = () => {
           />
 
           <button
-  type="submit"
-  className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto flex items-center justify-center gap-2 group"
->
-  Launch It
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={2}
-    stroke="currentColor"
-    className="w-5 h-5 transform transition-transform duration-200 group-hover:-translate-y-1"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M12 19V5m0 0l-6 6m6-6 6 6"
-    />
-  </svg>
-</button>
+            type="submit"
+            className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto flex items-center justify-center gap-2 group"
+          >
+            Launch It
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-5 h-5 transform transition-transform duration-200 group-hover:-translate-y-1"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 19V5m0 0l-6 6m6-6 6 6"
+              />
+            </svg>
+          </button>
         </form>
       </div>
     </div>

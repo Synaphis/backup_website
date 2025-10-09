@@ -54,7 +54,7 @@ export const Footer = () => {
 
             <li>
               <a
-                href="https://linkedin.com/company/yourcompany"
+                href="https://www.linkedin.com/company/synaphis"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our LinkedIn page"

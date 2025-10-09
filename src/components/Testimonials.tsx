@@ -4,9 +4,9 @@ import { twMerge } from "tailwind-merge";
 import Image, { StaticImageData } from "next/image";
 
 // ✅ Import your local images
-import ericaAvatar from "../assets/images/avatar-erica-wyatt.jpg";
-import noelAvatar from "../assets/images/avatar-noel-baldwin.jpg";
-import harryAvatar from "../assets/images/avatar-harry-bender.jpg";
+import ericaAvatar from "../assets/images/avatar-1.jpg";
+import noelAvatar from "../assets/images/avatar-2.jpg";
+import harryAvatar from "../assets/images/avatar-3.jpg";
 
 // ✅ Define a type for testimonials
 type Testimonial = {
@@ -69,7 +69,7 @@ export const TestimonialsSection = () => {
                     alt={testimonial.name}
                     width={64}
                     height={64}
-                    className="rounded-full object-cover bg-[#A1CCA6]/20"
+                    className="rounded-full item-center object-cover bg-[#A1CCA6]/20"
                   />
                   <div>
                     <div className="text-lg font-black text-[#A1CCA6]">{testimonial.name}</div>

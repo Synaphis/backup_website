@@ -2,9 +2,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { Menu, X } from "lucide-react"; // ✅ built-in icons
 import logoimage from "../assets/images/LineTech-removebg-preview.png";
-import MenuIcon from "../assets/icons/menu.svg";
-import CloseIcon from "../assets/icons/close-x-svgrepo-com.svg";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +34,7 @@ export const Navbar = () => {
       />
 
       {/* ===== Navbar Content ===== */}
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 md:py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 md:py-4 relative">
         {/* ===== Logo ===== */}
         <a href="/" className="flex items-center">
           <Image
@@ -81,12 +80,12 @@ export const Navbar = () => {
         <button
           aria-label="Toggle Menu"
           onClick={() => setMenuOpen(!menuOpen)}
-          className="border border-white/20 rounded-lg h-9 w-9 flex items-center justify-center md:hidden"
+          className="border border-white/20 rounded-lg h-9 w-9 flex items-center justify-center md:hidden relative z-[60]"
         >
           {menuOpen ? (
-            <CloseIcon className="w-5 h-5 text-white" />
+            <X className="w-5 h-5 text-white" /> // ✅ Close icon
           ) : (
-            <MenuIcon className="w-5 h-5 text-white" />
+            <Menu className="w-5 h-5 text-white" /> // ✅ Hamburger icon
           )}
         </button>
       </div>
@@ -114,7 +113,7 @@ export const Navbar = () => {
               </motion.a>
             ))}
 
-            {/* ===== Contact CTA (Mobile, unified style) ===== */}
+            {/* ===== Contact CTA (Mobile) ===== */}
             <motion.a
               href="#contact"
               onClick={() => setMenuOpen(false)}
