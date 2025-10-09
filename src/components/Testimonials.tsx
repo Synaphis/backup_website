@@ -4,9 +4,9 @@ import { twMerge } from "tailwind-merge";
 import Image, { StaticImageData } from "next/image";
 
 // ✅ Import your local images
-import ericaAvatar from "../assets/images/avatar-erica-wyatt.jpg";
-import noelAvatar from "../assets/images/avatar-noel-baldwin.jpg";
-import harryAvatar from "../assets/images/avatar-harry-bender.jpg";
+import ericaAvatar from "../assets/images-tracked/avatar-erica-wyatt.jpg";
+import noelAvatar from "../assets/images-tracked/avatar-noel-baldwin.jpg";
+import harryAvatar from "../assets/images-tracked/avatar-harry-bender.jpg";
 
 // ✅ Define a type for testimonials
 type Testimonial = {
