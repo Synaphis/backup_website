@@ -21,7 +21,7 @@ export const CallToAction = () => {
     <div
       ref={containerRef}
       id="contact"
-      className="relative bg-black text-white py-[160px] sm:py-[200px] text-center overflow-hidden"
+      className="relative bg-black text-white py-[72px] sm:py-24 text-center overflow-hidden"
     >
       <div className="container max-w-xl relative mx-auto px-4">
         {/* ===== Floating Image Parallax ===== */}
@@ -58,7 +58,7 @@ export const CallToAction = () => {
 
           <button
   type="submit"
-  className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#D2C1B6] transition-colors w-full sm:w-auto flex items-center justify-center gap-2 group"
+  className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto flex items-center justify-center gap-2 group"
 >
   Launch It
   <svg

@@ -42,7 +42,7 @@ const latestPosts: Post[] = [
 
 export const LatestPosts = () => {
   return (
-    <section className="relative py-60 text-white bg-black">
+    <section className="relative py-[72px] sm:py-24 text-white bg-black">
       <div className="container mx-auto relative z-10">
         {/* Section Header */}
         <h2 className="font-black text-5xl sm:text-6xl text-center">

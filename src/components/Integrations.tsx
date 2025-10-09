@@ -22,13 +22,13 @@ export type IntegrationsType = typeof integrations;
 
 export const Integrations = () => {
   return (
-    <section id="integrations" className="py-24 overflow-hidden bg-black text-white">
+    <section id="integrations" className="py-[72px] sm:py-24 overflow-hidden bg-black text-white">
       <div className="container">
         <div className="grid lg:grid-cols-2 items-center lg:gap-16">
           {/* Left Column */}
           <div>
             <h2 className="text-6xl font-medium mt-6">
-              Integrated Tools, Open <span className="text-[#FCA47C]">Innovation</span>
+              Integrated Tools, Open <span className="text-[#FCA47C] inline-block -rotate-2">Innovation</span>:
             </h2>
 
             <p className="text-white/50 mt-4 text-lg">

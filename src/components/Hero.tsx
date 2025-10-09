@@ -5,6 +5,20 @@ import Cloud_Computing_Image from "../assets/images/cloud_computing.png";
 import { motion } from "framer-motion";
 
 export const Hero = () => {
+  const scrollToServices = () => {
+    const el = document.getElementById("services");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const onKeyDownScroll = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      scrollToServices();
+    }
+  };
+
   return (
     <div>
       <div
@@ -62,13 +76,34 @@ export const Hero = () => {
             </p>
           </div>
 
-          {/* Hero button */}
+          {/* Downward arrow (replaces the button) */}
           <div className="flex justify-center mt-8">
-            <button
-              className="bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-[#097c87] transition-colors mt-8 w-full sm:w-auto"
+            <motion.button
+              type="button"
+              aria-label="Scroll to services"
+              onClick={scrollToServices}
+              onKeyDown={onKeyDownScroll}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+              className="mt-8 rounded-full p-3 bg-white/10 hover:bg-white/20 border border-white/10 focus:outline-none focus:ring-2 focus:ring-white/30 drop-shadow-md"
             >
-              Explore What&apos;s Possible
-            </button>
+              {/* Chevron Down SVG */}
+              <svg
+                className="h-6 w-6 sm:h-8 sm:w-8"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </motion.button>
           </div>
         </div>
       </div>

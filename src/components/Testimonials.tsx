@@ -41,11 +41,11 @@ const testimonials: Testimonial[] = [
 // ✅ Component
 export const TestimonialsSection = () => {
   return (
-    <section className="py-24 bg-black text-white">
+    <section className="py-[72px] sm:py-24 bg-black text-white">
       <div className="container mx-auto px-6">
         {/* Heading */}
        <h2 className="text-center text-5xl sm:text-6xl font-black mb-16">
-  What Our <span className="text-[#A1CCA6] inline-block -rotate-3">Clients</span> Say
+  What Our <span className="text-[#A1CCA6] inline-block -rotate-3">Clients</span> Say?
 </h2>
 
         {/* Testimonial cards */}
