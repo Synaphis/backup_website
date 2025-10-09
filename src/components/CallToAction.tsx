@@ -41,7 +41,7 @@ export const CallToAction = () => {
         {/* ===== Heading ===== */}
         <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter mb-6">
           Let’s Work{" "}
-          <span className="text-[#F9D779] inline-block -rotate-2">
+          <span className="text-[#341539] inline-block -rotate-2">
             Together
           </span>
           !
@@ -64,7 +64,7 @@ export const CallToAction = () => {
         {/* ===== Subtext ===== */}
         <p className="text-lg sm:text-xl leading-relaxed max-w-md mx-auto mb-10 mt-12 sm:mt-0">
           Great things start with a{" "}
-          <span className="text-[#F9D779] font-semibold">
+          <span className="text-[#341539] font-semibold">
             simple conversation
           </span>
           . Tell us about your vision, and let’s collaborate to turn your ideas
