@@ -52,7 +52,7 @@ export const Hero = () => {
                   width={160}
                   height={160}
                   className="
-                    sm:w-[290px] sm:h-[290px]
+                    sm:w-[390px] sm:h-[390px]
                     md:w-[360px] md:h-[360px]
                     brightness-[1.08] contrast-[0.9] saturate-[0.9]
                     drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] 
@@ -80,7 +80,7 @@ export const Hero = () => {
                   width={160}
                   height={160}
                   className="
-                    sm:w-[290px] sm:h-[290px]
+                    sm:w-[390px] sm:h-[390px]
                     md:w-[360px] md:h-[360px]
                     brightness-[0.96] rotate-[20deg]
                     transition-all duration-1000
