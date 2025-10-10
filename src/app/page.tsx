@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import {TestimonialsSection} from "@/components/Testimonials";
 import {Integrations} from "@/components/Integrations";
 import {LatestPosts} from "@/components/LatestPosts";
+import {LogoTicker} from "@/components/LogoTicker";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       
       <Navbar />
       <Hero />
+      <LogoTicker/>
       
       
       <section id="services">

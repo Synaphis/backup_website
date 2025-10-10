@@ -1,30 +1,33 @@
 "use client";
 
-import acmeLogo from "../assets/images/acme.png";
-import quantumLogo from "../assets/images/quantum.png";
-import echoLogo from "../assets/images/echo.png";
-import celestialLogo from "../assets/images/celestial.png";
-import pulseLogo from "../assets/images/pulse.png";
-import apexLogo from "../assets/images/apex.png";
+
+
 import company_1 from "../assets/images/company_1.png";
+import company_2 from "../assets/images/company_2.png";
+import company_3 from "../assets/images/company_3.png";
+import company_4 from "../assets/images/company_4.png";
+import company_5 from "../assets/images/company_5.png";
+import company_6 from "../assets/images/company_6.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  { src: acmeLogo, alt: "Acme Logo" },
-  { src: quantumLogo, alt: "Quantum Logo" },
-  { src: echoLogo, alt: "Echo Logo" },
-  { src: celestialLogo, alt: "Celestial Logo" },
-  { src: pulseLogo, alt: "Pulse Logo" },
-  { src: apexLogo, alt: "Apex Logo" },
+  
+   { src: company_1, alt: "Company 1" },
+  { src: company_2, alt: "Company 2" },
+  { src: company_3, alt: "Company 3" },
+  { src: company_4, alt: "Company 4" },
+  { src: company_5, alt: "Company 5" },
+  { src: company_6, alt: "Company 6" },
+  
   
 ];
 
 export const LogoTicker = () => {
   return (
-    <div className="bg-black text-white py-[72px] sm:py-24">
+    <div className="bg-white text-black py-[48px] sm:py-24">
       <div className="container">
-        <h2 className="text-xl text-center text-white/80">
+        <h2 className="text-xl text-center text-black/80">
           Trusted by Leading Companies and Visionaries Worldwide
         </h2>
 
@@ -40,17 +43,18 @@ export const LogoTicker = () => {
                 key={`logo-${index}`}
                 src={src}
                 alt={alt}
-                className="flex-none h-8 w-auto"
+                className="flex-none h-24 w-auto"
               />
             ))}
-            {images.map(({ src, alt }, index) => (
+             {images.map(({ src, alt }, index) => (
               <Image
-                key={`logo-duplicate-${index}`}
+                key={`logo-${index}`}
                 src={src}
                 alt={alt}
-                className="flex-none h-8 w-auto"
+                className="flex-none h-24 w-auto"
               />
             ))}
+           
           </motion.div>
         </div>
       </div>

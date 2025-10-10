@@ -53,7 +53,7 @@ export const Hero = () => {
                   height={160}
                   className="
                     sm:w-[390px] sm:h-[390px]
-                    md:w-[360px] md:h-[360px]
+                    md:w-[360px] md:h-[320px]
                     brightness-[1.08] contrast-[0.9] saturate-[0.9]
                     drop-shadow-[0_0_10px_rgba(0,0,0,0.2)] 
                     transition-all duration-1000
