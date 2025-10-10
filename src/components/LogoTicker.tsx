@@ -6,6 +6,7 @@ import echoLogo from "../assets/images/echo.png";
 import celestialLogo from "../assets/images/celestial.png";
 import pulseLogo from "../assets/images/pulse.png";
 import apexLogo from "../assets/images/apex.png";
+import company_1 from "../assets/images/company_1.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -16,6 +17,7 @@ const images = [
   { src: celestialLogo, alt: "Celestial Logo" },
   { src: pulseLogo, alt: "Pulse Logo" },
   { src: apexLogo, alt: "Apex Logo" },
+  
 ];
 
 export const LogoTicker = () => {

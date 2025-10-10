@@ -71,7 +71,7 @@ export const Features = () => {
       <div className="container">
         {/* Heading */}
         <h2 className="font-black text-center text-5xl sm:text-6xl  mt-6 text-white">
-          Turning Ideas Into <span className="text-[#2E151B]">Impact</span>
+          Turning Ideas Into <span className="text-[#3D0008]">Impact</span>
         </h2>
 
         {/* Paragraph */}
@@ -79,8 +79,8 @@ export const Features = () => {
           <p className="text-center text-xl text-white/90">
             We help businesses and individuals bring their visions to life with
             technology that feels effortless and empowering. From intelligent{" "}
-            <span className="text-[#2E151B]">AI systems</span> and custom-built software to{" "}
-            <span className="text-[#2E151B]">cloud solutions</span>, digital growth, and automation, our
+            <span className="text-[#3D0008]">AI systems</span> and custom-built software to{" "}
+            <span className="text-[#3D0008]">cloud solutions</span>, digital growth, and automation, our
             services are designed to make innovation accessible, scalable, and meaningful.
           </p>
         </div>
@@ -98,7 +98,7 @@ export const Features = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                className="relative px-5 py-10 text-center rounded-xl sm:flex-1 cursor-pointer bg-[#2E151B]/20 border border-[#6E3844]/50 backdrop-blur-sm hover:shadow-[0_0_20px_rgba(180,124,136,0.3)] transition-shadow duration-300"
+                className="relative px-5 py-10 text-center rounded-xl sm:flex-1 cursor-pointer bg-[#3D0008]/20 border border-[#6E3844]/50 backdrop-blur-sm transition-shadow duration-300"
 
               >
                 {/* Icon */}
