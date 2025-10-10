@@ -2,18 +2,18 @@
 
 
 
-import company_1 from "../assets/images/company_1.png";
-import company_2 from "../assets/images/company_2.png";
-import company_3 from "../assets/images/company_3.png";
-import company_4 from "../assets/images/company_4.png";
-import company_5 from "../assets/images/company_5.png";
-import company_6 from "../assets/images/company_6.png";
+import company_1 from "../assets/images-tracked-2/company_1.png";
+import company_2 from "../assets/images-tracked-2/company_2.png";
+import company_3 from "../assets/images-tracked-2/company_3.png";
+import company_4 from "../assets/images-tracked-2/company_4.png";
+import company_5 from "../assets/images-tracked-2/company_5.png";
+import company_6 from "../assets/images-tracked-2/company_6.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
   
-   { src: company_1, alt: "Company 1" },
+  { src: company_1, alt: "Company 1" },
   { src: company_2, alt: "Company 2" },
   { src: company_3, alt: "Company 3" },
   { src: company_4, alt: "Company 4" },
