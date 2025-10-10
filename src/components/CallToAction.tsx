@@ -55,7 +55,7 @@ export const CallToAction = () => {
           <Image
             src={Innovative_Startup_Image}
             alt="Innovative Startup Illustration"
-            className="w-[125px] -rotate-[25deg] opacity-90"
+            className="w-[115px] -rotate-[25deg] opacity-90"
             draggable="false"
             priority
           />

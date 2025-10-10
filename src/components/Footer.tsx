@@ -18,7 +18,7 @@ export const Footer = () => {
           <ul className="flex justify-center gap-4">
             <li>
               <a
-                href="https://twitter.com/yourhandle"
+                href="https://x.com/Synaphis"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our X (Twitter) page"

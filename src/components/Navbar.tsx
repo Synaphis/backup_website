@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Menu, X } from "lucide-react"; // ✅ built-in icons
+import { Menu, X } from "lucide-react";
 import logoimage from "../assets/images/LineTech-removebg-preview.png";
 
 export const Navbar = () => {
@@ -34,17 +34,19 @@ export const Navbar = () => {
       />
 
       {/* ===== Navbar Content ===== */}
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2 md:py-4 relative">
-        {/* ===== Logo ===== */}
-        <a href="/" className="flex items-center">
-          <Image
-            src={logoimage}
-            alt="Synaphis Logo"
-            width={150}
-            height={150}
-            className="h-12 w-auto sm:h-16 md:h-20 lg:h-24 transition-all duration-300"
-            priority
-          />
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 h-16 relative">
+        {/* ===== Logo (Balanced Size) ===== */}
+        <a href="/" className="flex items-center h-full pl-1">
+          <div className="relative h-10 md:h-12 flex items-center">
+            <Image
+              src={logoimage}
+              alt="Synaphis Logo"
+              width={150}
+              height={150}
+              className="h-full w-auto object-contain transform scale-[2.75] origin-left transition-transform duration-300"
+              priority
+            />
+          </div>
         </a>
 
         {/* ===== Desktop Navigation ===== */}
@@ -83,14 +85,14 @@ export const Navbar = () => {
           className="border border-white/20 rounded-lg h-9 w-9 flex items-center justify-center md:hidden relative z-[60]"
         >
           {menuOpen ? (
-            <X className="w-5 h-5 text-white" /> // ✅ Close icon
+            <X className="w-5 h-5 text-white" />
           ) : (
-            <Menu className="w-5 h-5 text-white" /> // ✅ Hamburger icon
+            <Menu className="w-5 h-5 text-white" />
           )}
         </button>
       </div>
 
-      {/* ===== Immersive Mobile Menu ===== */}
+      {/* ===== Mobile Menu ===== */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -100,7 +102,6 @@ export const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8 px-6"
           >
-            {/* ===== Mobile Links ===== */}
             {links.map((link, i) => (
               <motion.a
                 key={i}
@@ -113,7 +114,6 @@ export const Navbar = () => {
               </motion.a>
             ))}
 
-            {/* ===== Contact CTA (Mobile) ===== */}
             <motion.a
               href="#contact"
               onClick={() => setMenuOpen(false)}

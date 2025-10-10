@@ -25,10 +25,11 @@ export const Integrations = () => {
     <section id="integrations" className="py-[72px] sm:py-24 overflow-hidden bg-black text-white">
       <div className="container">
         <div className="grid lg:grid-cols-2 items-center lg:gap-16">
-          {/* Left Column */}
+          {/* ===== Left Column ===== */}
           <div>
             <h2 className="text-6xl font-medium mt-6">
-              Integrated Tools, Open <span className="text-[#FCA47C] inline-block -rotate-2">Innovation</span>:
+              Integrated Tools, Open{" "}
+              <span className="text-[#FCA47C] inline-block -rotate-2">Innovation</span>:
             </h2>
 
             <p className="text-white/50 mt-4 text-lg">
@@ -36,9 +37,11 @@ export const Integrations = () => {
               Bring your skills, work alongside innovators, and help shape what’s next.
             </p>
 
-            {/* Contribute & Build Together Button */}
-            <button
-              type="button"
+            {/* ===== Contribute & Build Together Button (Linked) ===== */}
+            <a
+              href="https://github.com/Synaphis" // ✅ replace with your actual GitHub URL
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-gray-200 transition-colors mt-8 w-full sm:w-auto"
             >
               Contribute & Build Together
@@ -56,10 +59,10 @@ export const Integrations = () => {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </button>
+            </a>
           </div>
 
-          {/* Right Column */}
+          {/* ===== Right Column ===== */}
           <div>
             <div className="h-[400px] lg:h-[800px] mt-8 lg:mt-0 overflow-hidden grid md:grid-cols-2 gap-4 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
               <IntegrationColumn integrations={integrations} />

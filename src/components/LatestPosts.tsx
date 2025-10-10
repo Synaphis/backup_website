@@ -1,6 +1,7 @@
 "use client";
 
 import { Card } from "../components/Card";
+import Link from "next/link"; // ✅ Added for internal routing
 
 type Post = {
   category: string;
@@ -44,7 +45,7 @@ export const LatestPosts = () => {
   return (
     <section className="relative py-[72px] sm:py-24 text-white bg-black">
       <div className="container mx-auto relative z-10">
-        {/* Section Header */}
+        {/* ===== Section Header ===== */}
         <h2 className="font-black text-5xl sm:text-6xl text-center">
           Read, <span className="text-[#097C87]">Learn</span>,{" "}
           <span className="text-[#FCA47C]">Explore</span> with{" "}
@@ -59,7 +60,7 @@ export const LatestPosts = () => {
           <span className="text-[#F9D779]">learn, grow, and think differently</span>.
         </p>
 
-        {/* Blog Cards */}
+        {/* ===== Blog Cards ===== */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
           {latestPosts.map((post, index) => (
             <Card
@@ -74,11 +75,11 @@ export const LatestPosts = () => {
           ))}
         </div>
 
-        {/* Explore More Button */}
+        {/* ===== Explore More Button (Linked) ===== */}
         <div className="text-center mt-16">
-          <button
+          <Link
+            href="https://medium.com/@synaphis" // ✅ your blog page route
             className="inline-flex items-center justify-center bg-white text-black h-12 rounded-lg px-6 font-semibold hover:bg-gray-200 transition mt-8 w-full sm:w-auto"
-            onClick={() => console.log("Navigate to company blog")}
           >
             Explore More
             <svg
@@ -95,7 +96,7 @@ export const LatestPosts = () => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
     </section>
